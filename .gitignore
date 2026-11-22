@@ -1,0 +1,4 @@
+node_modules/
+.wrangler/
+# 배포 때 npm run build로 자동 생성
+site/styles.css
