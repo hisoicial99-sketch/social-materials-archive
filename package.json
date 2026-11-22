@@ -1,0 +1,14 @@
+{
+  "name": "social-materials-archive",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -c tailwind.config.js -i src/input.css -o site/styles.css --minify",
+    "watch": "tailwindcss -c tailwind.config.js -i src/input.css -o site/styles.css --watch",
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17",
+    "wrangler": "^4"
+  }
+}

@@ -1,0 +1,11 @@
+// Cloudflare Workers 배포 설정 — site 폴더를 그대로 올립니다.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "social-materials-archive",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

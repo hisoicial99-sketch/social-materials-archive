@@ -1,0 +1,40 @@
+/* 에이투지체 (오토노머스에이투지, SIL OFL) — 눈누 공식 CDN */
+@font-face { font-family: 'A2z'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-4Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'A2z'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-5Medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'A2z'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-7Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'A2z', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  :focus-visible { outline: 2px solid #142438; outline-offset: 2px; }
+}
+
+@layer components {
+  /* 디지털 수업자료 16:9 썸네일 바탕 (원래 코드의 제도선 표면) */
+  .thumb-schematic-surface {
+    background-color: #F4F6F9;
+    background-image:
+      linear-gradient(to right, #E2E8F0 1px, transparent 1px),
+      linear-gradient(to bottom, #E2E8F0 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  /* 헤더 메뉴: 마우스를 올리거나 그 구역을 보고 있으면 밑줄 */
+  .nav-link { position: relative; display: inline-flex; align-items: center; min-height: 48px; flex: none; }
+  @media (min-width: 768px) { .nav-link { min-height: 80px; } }
+  .nav-link::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+    background: #142438; transform: scaleX(0); transform-origin: left;
+    transition: transform .24s cubic-bezier(.25,.8,.25,1);
+  }
+  .nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
+  .nav-link.is-active { font-weight: 700; }
+}

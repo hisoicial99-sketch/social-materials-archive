@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>사회과 수업자료 아카이브 | 하이쏘셜</title>
+  <meta name="description" content="고등학교 사회과 수업에서 직접 만들고 적용한 학습지, 슬라이드, 디지털 수업자료와 수업 기록을 모은 아카이브" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="bg-white text-ink selection:bg-ink selection:text-white">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded-full focus:border focus:border-ink">본문 바로가기</a>
+
+  <!-- 알림 메시지 -->
+  <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-50 translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-ink text-white px-5 py-3 rounded-full flex items-center gap-3 text-[13px] font-medium border border-ink-2">
+      <span id="toast-message">안내 메시지</span>
+    </div>
+  </div>
+
+  <!-- 1. 헤더: 사이트 이름 왼쪽, 메뉴 가운데 -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-line">
+    <div class="w-full max-w-[1600px] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-x-6 pt-3 md:pt-0">
+      <a href="#" id="home-link" class="justify-self-start text-[19px] sm:text-[21px] font-bold tracking-tight text-ink">
+        사회과 수업자료 아카이브
+      </a>
+
+      <nav aria-label="주요 메뉴" class="-mx-6 px-6 md:mx-0 md:px-0 flex flex-nowrap overflow-x-auto items-center justify-start md:justify-center gap-x-6 sm:gap-x-9 text-[15px] font-medium text-ink whitespace-nowrap">
+        <a href="#intro" data-nav="intro" class="nav-link">소개</a>
+        <a href="#subjects" data-nav="subjects" class="nav-link">과목별 분류</a>
+        <a href="#digital-materials" data-nav="digital-materials" class="nav-link">디지털 수업자료</a>
+        <a href="#archive-list" data-nav="archive-list" class="nav-link">수업자료 아카이브</a>
+      </nav>
+
+      <div aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main id="main" class="w-full max-w-[1600px] mx-auto px-6 lg:px-12 pb-24">
+
+    <!-- 2. 소개 -->
+    <section id="intro" class="scroll-mt-24 pt-8 md:pt-10">
+      <div class="bg-ink rounded-[20px] px-7 sm:px-12 lg:px-16 py-11 sm:py-14 lg:py-16 text-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+          <div class="lg:col-span-8">
+            <h1 class="text-[28px] sm:text-3xl lg:text-[38px] font-bold leading-[1.32] tracking-tight">
+              고등학교 사회과 수업자료 아카이브
+            </h1>
+            <p class="mt-4 sm:mt-5 text-[15px] sm:text-[16px] text-line leading-[1.82] max-w-3xl">
+              사회과 수업에서 직접 만들고 교실에 적용한 학습지, 강의 슬라이드, 디지털 수업자료를 모았습니다. 수업이 어떻게 흘러갔는지는 블로그 수업 기록으로 함께 남깁니다.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-3.5">
+              <a href="#subjects" class="inline-flex items-center gap-2 bg-white text-ink hover:bg-surface transition-colors px-5 py-2.5 rounded-full text-[14px] font-bold">
+                과목별로 찾기 <span aria-hidden="true">→</span>
+              </a>
+              <a href="#archive-list" class="inline-flex items-center gap-2 border border-slate-400/60 text-white hover:border-white transition-colors px-5 py-2.5 rounded-full text-[14px] font-medium">
+                전체 수업자료 보기
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4">
+            <div class="rounded-[14px] border border-ink-2 p-6 sm:p-7">
+              <h2 class="text-[15px] font-bold text-white">이렇게 정리했습니다</h2>
+              <ol class="mt-4 pt-4 border-t border-ink-2 space-y-3 text-[14px] text-line leading-[1.65]">
+                <li class="flex gap-3"><span class="font-bold text-white">1</span><span>공통·일반·진로·융합 선택과 공동교육과정 순서로 과목을 나눴습니다.</span></li>
+                <li class="flex gap-3"><span class="font-bold text-white">2</span><span>수업 중 바로 여는 웹앱·영상·게임은 따로 모았습니다.</span></li>
+                <li class="flex gap-3"><span class="font-bold text-white">3</span><span>자료 파일과 블로그 수업 기록을 한 줄에서 함께 열 수 있습니다.</span></li>
+              </ol>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 과목별 분류 -->
+    <section id="subjects" class="scroll-mt-24 pt-14 sm:pt-20">
+      <div class="flex flex-wrap items-center justify-between gap-4 pb-5">
+        <div class="flex flex-wrap items-center gap-3.5">
+          <h2 class="text-xl sm:text-[24px] font-bold tracking-tight">과목별 분류</h2>
+          <span class="text-line hidden sm:inline" aria-hidden="true">|</span>
+          <span class="text-[13.5px] text-muted">영역이나 과목을 고르면 아래 자료가 그 과목으로 좁혀집니다.</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-surface border border-line text-[13px] font-bold">
+            <span id="subject-active-badge-text">전체 과목</span>
+          </span>
+          <button type="button" data-action="reset" class="px-3.5 py-1 rounded-full border border-ink text-[13px] font-bold hover:bg-ink hover:text-white transition-colors">
+            전체 보기
+          </button>
+        </div>
+      </div>
+
+      <div class="w-full overflow-x-auto">
+        <div id="subject-classification-grid" class="min-w-[780px] grid grid-cols-6 divide-x divide-line border-y border-line"></div>
+      </div>
+    </section>
+
+    <!-- 4. 디지털 수업자료 -->
+    <section id="digital-materials" class="scroll-mt-24 pt-16 sm:pt-20 pb-16 sm:pb-20 border-b border-line">
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+
+        <div class="w-full lg:w-[28%] shrink-0">
+          <h2 class="text-2xl sm:text-[26px] font-bold tracking-tight">디지털 수업자료</h2>
+          <p class="mt-3 text-[14.5px] text-body leading-[1.72]">
+            수업 중에 학생들과 바로 여는 웹앱, 영상, 수업용 게임입니다.
+          </p>
+
+          <div role="group" aria-label="자료 유형" class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px]">
+            <button type="button" data-dtype="ALL" class="digital-type-btn">전체</button>
+            <button type="button" data-dtype="웹앱" class="digital-type-btn">웹앱</button>
+            <button type="button" data-dtype="영상" class="digital-type-btn">영상</button>
+            <button type="button" data-dtype="게임" class="digital-type-btn">게임</button>
+          </div>
+
+          <div class="mt-8 flex items-center gap-3">
+            <button type="button" id="digital-prev-btn" aria-label="이전 디지털 자료" class="w-11 h-11 rounded-full border border-slate-300 hover:border-ink flex items-center justify-center transition-colors">‹</button>
+            <button type="button" id="digital-next-btn" aria-label="다음 디지털 자료" class="w-11 h-11 rounded-full bg-ink hover:bg-ink-2 text-white flex items-center justify-center transition-colors">›</button>
+            <span id="digital-page-indicator" class="ml-1 text-[13px] font-medium text-muted">1 / 1</span>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-[72%]">
+          <div id="digital-thumbnails-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-7"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. 수업자료 아카이브 -->
+    <section id="archive-list" class="scroll-mt-24 pt-16 sm:pt-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 pb-6">
+        <div>
+          <h2 class="text-2xl sm:text-[26px] font-bold tracking-tight">수업자료 아카이브</h2>
+          <p class="mt-2 text-[14px] text-muted">자료 파일과 실제 수업을 기록한 블로그 글을 함께 볼 수 있습니다.</p>
+        </div>
+        <div class="w-full md:w-96 relative">
+          <label for="archive-search-input" class="sr-only">수업자료 검색</label>
+          <input type="search" id="archive-search-input" placeholder="자료명, 단원, 키워드"
+            class="w-full bg-surface border border-line focus:border-ink focus:bg-white rounded-full pl-10 pr-4 py-2.5 text-[14px] placeholder:text-slate-400 outline-none transition-colors" />
+          <svg aria-hidden="true" class="w-4 h-4 text-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+      </div>
+
+      <div class="py-3.5 border-y border-ink flex flex-wrap items-center justify-between gap-3">
+        <div role="group" aria-label="파일 형식" class="flex flex-wrap items-center gap-4 sm:gap-5 text-[14px]">
+          <button type="button" data-ftype="ALL" class="archive-ftype-btn">전체 형식</button>
+          <button type="button" data-ftype="HWP" class="archive-ftype-btn">HWP</button>
+          <button type="button" data-ftype="PPTX" class="archive-ftype-btn">PPTX</button>
+          <button type="button" data-ftype="PDF" class="archive-ftype-btn">PDF</button>
+          <button type="button" data-ftype="XLSX" class="archive-ftype-btn">XLSX</button>
+        </div>
+        <div class="text-[13.5px] text-muted" aria-live="polite">
+          <span>선택 분류: <strong id="archive-filter-status" class="font-bold text-ink">전체 과목</strong></span>
+          <span class="mx-2 text-line" aria-hidden="true">|</span>
+          <span>자료 <strong id="archive-result-count" class="font-bold text-ink">0</strong>건</span>
+        </div>
+      </div>
+
+      <div class="w-full overflow-x-auto">
+        <ul id="archive-list-rows" class="min-w-[680px] divide-y divide-line border-b border-line"></ul>
+      </div>
+
+      <div id="archive-empty-state" class="hidden py-16 text-center border-b border-line">
+        <p id="archive-empty-title" class="text-[16px] font-bold">조건에 맞는 수업자료가 없습니다.</p>
+        <p id="archive-empty-desc" class="mt-1.5 text-[14px] text-muted">검색어를 지우거나 과목·파일 형식을 전체로 바꿔 보세요.</p>
+        <button type="button" id="archive-empty-reset" data-action="reset" class="mt-5 px-5 py-2 rounded-full border border-ink text-[13.5px] font-bold hover:bg-ink hover:text-white transition-colors">
+          전체 목록 보기
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 6. 푸터 -->
+  <footer class="bg-surface border-t border-line">
+    <div class="w-full max-w-[1600px] mx-auto px-6 lg:px-12 py-9 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <div class="text-[15px] font-bold">사회과 수업자료 아카이브</div>
+        <p class="mt-1 text-[13px] text-muted">© 하이쏘셜(hisocial) · 수업 목적의 비상업적 이용은 출처를 밝히고 자유롭게 하셔도 됩니다.</p>
+      </div>
+      <nav aria-label="영역 바로가기" id="footer-categories" class="flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] font-medium text-body"></nav>
+    </div>
+  </footer>
+
+  <!-- 팝업 1: 수업자료 -->
+  <div id="material-modal" class="modal fixed inset-0 z-50 hidden items-center justify-center p-4 bg-ink/55">
+    <div role="dialog" aria-modal="true" aria-labelledby="m-modal-title" class="bg-white border border-line rounded-[16px] max-w-lg w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+      <button type="button" data-close aria-label="창 닫기" class="w-11 h-11 rounded-full border border-line hover:border-ink flex items-center justify-center text-muted hover:text-ink transition-colors absolute top-5 right-5">✕</button>
+      <div class="flex flex-wrap items-center gap-2 text-[12.5px] pr-12">
+        <span id="m-modal-category" class="font-medium text-muted"></span>
+        <span class="text-slate-400" aria-hidden="true">/</span>
+        <span id="m-modal-subject" class="font-bold"></span>
+        <span class="text-slate-400" aria-hidden="true">·</span>
+        <span id="m-modal-unit" class="text-muted"></span>
+        <span id="m-modal-filetype" class="ml-1 px-2 py-0.5 rounded bg-ink text-white text-[11px] font-bold"></span>
+      </div>
+      <h3 id="m-modal-title" class="mt-3 text-[19px] sm:text-[20px] font-bold leading-snug pr-8"></h3>
+      <div class="mt-5 pt-4 border-t border-line">
+        <div class="text-[12.5px] font-bold text-muted">수업 활용 팁과 활동 개요</div>
+        <p id="m-modal-summary" class="mt-1.5 text-[14.5px] text-body leading-[1.75]"></p>
+      </div>
+      <div class="mt-5 p-4 rounded-[12px] bg-surface border border-line text-[13px] text-body space-y-1">
+        <div>파일: <strong id="m-modal-filename" class="font-bold text-ink break-all"></strong></div>
+        <div id="m-modal-meta-row">분량: <span id="m-modal-meta" class="text-ink"></span></div>
+      </div>
+      <div class="mt-6 pt-4 border-t border-line flex flex-wrap items-center justify-end gap-2.5">
+        <button type="button" id="m-modal-copy" class="px-4 py-2.5 rounded-full border border-slate-300 hover:border-ink text-[13.5px] font-medium transition-colors">자료 안내 복사</button>
+        <a id="m-modal-blog" href="#" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-full border border-ink text-[13.5px] font-bold transition-colors hover:bg-surface">블로그 수업 기록</a>
+        <a id="m-modal-download" href="#" class="px-5 py-2.5 rounded-full bg-ink hover:bg-ink-2 text-white text-[13.5px] font-bold transition-colors">수업자료 받기</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 팝업 2: 디지털 수업자료 -->
+  <div id="digital-modal" class="modal fixed inset-0 z-50 hidden items-center justify-center p-4 bg-ink/55">
+    <div role="dialog" aria-modal="true" aria-labelledby="d-modal-title" class="bg-white border border-line rounded-[16px] max-w-xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+      <button type="button" data-close aria-label="창 닫기" class="w-11 h-11 rounded-full border border-line hover:border-ink flex items-center justify-center text-muted hover:text-ink transition-colors absolute top-5 right-5">✕</button>
+      <div class="flex items-center gap-2 text-[12.5px] pr-12">
+        <span id="d-modal-type" class="px-2.5 py-0.5 rounded bg-ink text-white font-bold"></span>
+        <span id="d-modal-category" class="text-muted"></span>
+        <span class="text-slate-400" aria-hidden="true">/</span>
+        <span id="d-modal-subject" class="font-bold"></span>
+      </div>
+      <h3 id="d-modal-title" class="mt-3 text-[19px] sm:text-[20px] font-bold leading-snug pr-8"></h3>
+      <div id="d-modal-thumb" class="mt-4 aspect-video w-full rounded-[10px] thumb-schematic-surface border border-line flex items-center justify-center overflow-hidden"></div>
+      <p id="d-modal-desc" class="mt-4 text-[14.5px] text-body leading-[1.75]"></p>
+      <div class="mt-6 pt-4 border-t border-line flex flex-wrap items-center justify-between gap-3">
+        <span id="d-modal-env" class="text-[13px] text-muted"></span>
+        <a id="d-modal-launch" href="#" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-full bg-ink hover:bg-ink-2 text-white text-[13.5px] font-bold transition-colors">열기 <span aria-hidden="true">→</span><span class="sr-only">(새 창)</span></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/data.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
