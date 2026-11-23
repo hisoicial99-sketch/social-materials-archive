@@ -32,6 +32,18 @@ const SUBJECT_CLASSIFICATION = [
   },
 */
 const DIGITAL_MATERIALS = [
+  {
+    id: 'coldwar-archive',
+    type: '게임',
+    category: '일반선택',
+    subject: '세계사',
+    title: '기밀문서 X — 1991, 냉전 기록 보관소',
+    summary: '소련 해체 직후의 기록 보관소 신입 직원이 되어 뒤섞인 냉전 파일 4개를 정리하는 10분 방탈출 게임입니다.',
+    desc: '냉전 단원(교과서 208~209쪽) 정리용 게임입니다. 상자 4개를 차례로 열며 유럽의 진영 분류, 중국의 분단, 쿠바 미사일 위기, 6·25 전쟁과 베트남 전쟁의 대리전 구도를 풉니다. 서가 번호 다이얼과 카드 조합으로 답하고, 틀리면 출입증 1장을 잃고 교과서 쪽수 힌트가 나옵니다. 제한 시간 10분, 학생 1명당 기기 1대로 혼자 진행합니다.',
+    url: '/play/coldwar-archive/',
+    thumb: 'images/coldwar-archive.png',
+    env: '웹 브라우저 · 1인 1기기 · 10분',
+  },
 ];
 
 /* 3. 수업자료 — 학습지 · 슬라이드 · PDF · 엑셀
