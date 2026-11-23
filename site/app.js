@@ -1,4 +1,4 @@
-/* 사회과 수업자료 아카이브 — 화면 동작
+/* 하이쏘셜's 사회·역사 수업 놀이터 — 화면 동작
    자료 내용은 data.js에서 고칩니다. 이 파일은 고칠 필요가 없습니다. */
 (function () {
   'use strict';
@@ -364,7 +364,7 @@
   function copyMaterialInfo() {
     if (!currentMaterial) return;
     const link = currentMaterial.file ? new URL(currentMaterial.file, location.href).href : location.href;
-    const text = `[사회과 수업자료 아카이브] ${currentMaterial.subject} - ${currentMaterial.title}\n${link}`;
+    const text = `[하이쏘셜's 사회·역사 수업 놀이터] ${currentMaterial.subject} - ${currentMaterial.title}\n${link}`;
     const done = () => showToast('자료 안내를 복사했습니다.');
     const fail = () => showToast('복사하지 못했습니다. 주소창의 주소를 직접 복사해 주세요.');
     if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(done, fail);
